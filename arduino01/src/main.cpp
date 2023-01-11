@@ -5,9 +5,9 @@
 #define BUTTON_PIN 2
 
 EthernetUDP Udp;
-byte mac[] = {0x90, 0xA2, 0xDA, 0x00, 0x64, 0x44};
-byte ip[] = {192, 168, 1, 131};
-byte remoteip[] = {192, 168, 1, 151};
+byte mac[] = {0x90, 0xA2, 0xDA, 0x00, 0x64, 0x50};
+byte ip[] = {192, 168, 0, 50};
+byte remoteip[] = {192, 168, 0, 44};
 
 unsigned int port = 8888;
 
@@ -38,6 +38,11 @@ void loop()
     }
 
     isActive = !isActive;
+
+    if (isActive)
+      isActive = '1';
+    else
+      isActive = '0';
   }
 
   Serial.print("isActive: ");
