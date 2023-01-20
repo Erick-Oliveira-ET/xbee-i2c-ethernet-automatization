@@ -19,9 +19,8 @@ uint8_t step = 0;
 uint8_t stepA = 0;
 int ledPortState = 0;
 int ledBuiltinState = 0;
-// int SEQ_B[5] = {0, 0, 1, -1, 0}; // SEQ = { A+, A-, B+, A+B- , A- }
-int SEQ_B[6] = {0, 0, 0, -1, 1, 0}; // SEQ = { A+, A-, B+, A+B- , A- }
-int SEQ_B_SIZE = 6;
+int SEQ_B[5] = {0, 0, 1, -1, 0}; // SEQ = { A+, A-, B+, A+B- , A- }
+int SEQ_B_SIZE = 5;
 
 /**
  * Turns the rawState received by the Arduino in code
